@@ -1,0 +1,53 @@
+This is a basic chess clock for a timed chess game
+	The first display is the clock window which contains the last configuration of the clock used.
+	The last config is stored in helo.csv.This is done since if game closes unexpectedly by random clicks or
+	exit then it can be retrieved.
+	Then there is alternating color change to indicate the move.
+	There also exists white panel and black panel with indication to know who is black and white.
+	Also have pause/resume button,exit button and refresh button
+	Pause and resume button used to pause and resume which allows user to pause if needed
+	Refresh button is used to reset the values if new game is created and we do not want to create an new version
+  	every time.
+	Exit button is used to move back and forth to timer page and creating page
+	While exit button is called the game is automatically paused
+	
+	Also in refresh button we have a popup which is beneficial since if a player touches the refresh button by
+	mistake so it asks if want to refresh.If given yes then it is refreshed
+	
+	Then the button color keeps changing and becomes red if time becomes zero,after which either cant play.
+	So refresh creates a new version of the game or exit and creation or existing use of history can be used
+
+	Exit button leads us to a another page which contains move to timer button and new game creation button
+	
+	In new game creation button u can set white time,black time and also the corresponding increments
+	Once the set button is pressed it asks for confirmation using a new popup
+	
+	We also have history of games which contain games which were created.Since all cannot be displayed top ten created
+	times are displayed in last to first created order.So clicking on the history allows u to set the time associated 
+	with the history.It again asks for a conformation(popup) on giving yes allows to the timer window values set.
+	So u can keep toggling between timer window and creation window
+
+Additions:
+	login and signup(not much useful)
+	absorbing the white black  time interval for each moves in every game(data collection) to predict winner.
+	more complicated modes of clock
+	settings page to allow the user to customize the layout in buttons and history
+	more features to handle history 
+	add more graphics and pictures
+
+Mistakes done:
+	handled time variable very bad leading to a cumborsome code
+	ideally should rewamp so that if i could represent and handle time variable in all situations
+	then the code will become shorter
+	to much reluctancy in the initial part and not trying to think the source of problem but wander 
+	around like without focus
+	could have done little more if managed time well
+
+Learning Curve:
+	New experience since not worked much in graphics and widgets.
+	Learning how to learn and debug independantly
+	Since i was alone i completely debugged everything without help which is not possible if with friends
+	Increased confidence to do developement about which i was very reluctant in the first place
+	Learning to code more length of code and debug everytime
+	Good experience needed for my upcoming years 	
+	

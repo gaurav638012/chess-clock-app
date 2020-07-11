@@ -1,0 +1,67 @@
+#:import FadeTransition kivy.uix.screenmanager.FadeTransition
+MyScreenManager:
+    transition: FadeTransition()
+    SecondScreen:
+    FirstScreen:
+
+<SecondScreen>:
+    name:"second"
+    FloatLayout:
+        Button:
+            id: refresh_button
+            font_size : 20
+            size_hint: 0.1,0.1
+            pos_hint: {'center_x':0.5,'top':1}
+            text : "refresh"
+            background_color : [1,0,0,1]
+            on_press:root.refresher()
+        Button:
+            id: exit_button
+            font_size : 20
+            size_hint: 0.1,0.1
+            pos_hint : {'center_x':0.5,'bottom':0}
+            text : "exit"
+            background_color : [1,0,0,1]
+            on_press:root.pauser()
+            on_release:app.root.current='first'
+        Button:
+            id: pause_button
+            font_size : 20
+            size_hint: 0.1,0.1
+            pos_hint : {'center_x':0.5,'center_y':0.5}
+            text : "pause"
+            background_color : [1,0,0,1]
+            on_release:root.pauser()
+        Button:
+                            
+            id:white
+            size_hint:0.45,0.9
+            background_color : [0,1,1,1]
+            on_press: root.click_setter_white()
+            text:root.white_string
+            font_size:100
+        Label:
+            text:'white'
+            font_size:20
+            size_hint:0.1,0.1
+            pos_hint:{'left':0,'top':1}   
+        Button:
+            id:black
+            size_hint:0.45,0.9
+            pos_hint: {'right':1,'top':0.9}
+            background_color : [0,1,1,1]
+            on_press:root.click_setter_black()
+            text:root.black_string
+            font_size:100
+        Label:
+            text:'black'
+            font_size:20
+            size_hint:0.1,0.1
+            pos_hint:{'right':1,'top':1}  
+<FirstScreen>:
+    name:'First'
+    FloatLayout:
+        Button:
+            text:'move to timer'
+            font_size:100
+            on_press:app.root.current='second'

@@ -1,0 +1,26 @@
+<MainWidget>: 
+  
+    # Assigning the alignment to buttons 
+    BoxLayout: 
+        orientation: 'vertical' 
+  
+        # Create Button 
+          
+        Button: 
+            text: 'start' 
+            on_press: root.start() 
+              
+        Button: 
+            text: 'stop' 
+            on_press: root.stop() 
+              
+        Button: 
+            text: 'Reset' 
+            on_press: root.number = 0 
+  
+    # Create the Label 
+    Label: 
+        text: str(round(root.number)) 
+        text_size: self.size 
+        halign: 'center' 
+        valign: 'middle' 
